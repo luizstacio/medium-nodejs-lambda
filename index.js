@@ -4,7 +4,7 @@ exports.handler = function(event, context, callback) {
 	var data = event.bodyJson || {};
 	
 	// Sets the username - replace username with your Medium Username
-	var username = 'username'
+	var username = process.env.USERNAME
 	var url = "https://medium.com/@"+username+"/latest?format=json";
 	
 	// Make the request to Medium and return the Obj
